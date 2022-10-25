@@ -18,7 +18,7 @@ connectDB();
 
 //crud operations
 //get all fuel 
-app.get('/',async function(req,res){
+app.get('/get',async function(req,res){
     const fuel = await Fuel.find().exec();
     res.status(200).json(fuel);
 });
